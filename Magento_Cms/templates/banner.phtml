@@ -1,0 +1,24 @@
+<?php
+
+    echo $block->getLayout()
+
+               ->createBlock('Magento\Cms\Block\Block')
+
+               ->setBlockId('banner')
+
+               ->toHtml();
+
+?>
+
+<script type="text/javascript">
+	require([
+    'jquery',
+    'owlcarousel'
+], function($) {
+    $('.banner').owlCarousel({
+        loop: true,
+        nav: false,
+        items:1
+    });
+});
+</script>

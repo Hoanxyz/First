@@ -1,0 +1,14 @@
+{
+    "name": "aht/first",
+    "description": "N/A",
+    "require": {
+        "magento/framework": "*",
+        "magento/theme-frontend-luma": "*"
+    },
+    "type": "magento2-theme",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ]
+    }
+}
