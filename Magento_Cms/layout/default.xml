@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- call rtb -->
+        <referenceBlock name="page.top">
+    		<block class="Magento\Framework\View\Element\Template" name="rtb" template="Magento_Cms::rtb.phtml" before="breadcrumbs" />
+    	</referenceBlock>
+
+        <!-- call pharmacy login bar to header -->
+        <referenceBlock name="header-wrapper">
+    		<block class="Magento\Framework\View\Element\Template" name="pharmacy.login" template="Magento_Cms::pharmacylogin.phtml" before="-"/>
+    	</referenceBlock>
+
+        <!-- remove footer link -->
+        <referenceBlock name="footer_links" remove="true"/>
+
+         <!-- call slogan to footer -->
+        <referenceBlock name="footer">
+    		<block class="Magento\Framework\View\Element\Template" name="hse" template="Magento_Cms::hse.phtml" before="footer_links"/>
+    	</referenceBlock>
+
+         <!-- call link footer to footer -->
+        <referenceBlock name="footer">
+    		<block class="Magento\Framework\View\Element\Template" name="pharmacyfooter" template="Magento_Cms::pharmacyfooter.phtml" after="hse"/>
+    	</referenceBlock>
+    </body>
+</page>

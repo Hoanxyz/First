@@ -7,6 +7,39 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-    	
+    	<!-- call banner -->
+        <referenceContainer name="main">
+			<block class="Magento\Framework\View\Element\Template" name="banner" template="Magento_Cms::banner.phtml"  before="-"/>
+    	</referenceContainer>
+
+        <!-- call feature brand-->
+        <referenceContainer name="main">
+			<block class="Magento\Framework\View\Element\Template" name="feature.brand" template="Magento_Cms::featurebrand.phtml"  after="-"/>
+    	</referenceContainer>
+
+        <!-- call 2 titles-->
+        <referenceContainer name="main">
+			<block class="Magento\Framework\View\Element\Template" name="two.titles" template="Magento_Cms::twotitles.phtml"  before="feature.brand"/>
+    	</referenceContainer>
+
+        <!-- call insta-->
+        <referenceContainer name="main">
+			<block class="Magento\Framework\View\Element\Template" name="insta" template="Magento_Cms::insta.phtml"  before="two.titles"/>
+    	</referenceContainer>
+
+        <!-- call promo-->
+        <referenceContainer name="main">
+			<block class="Magento\Framework\View\Element\Template" name="promo" template="Magento_Cms::promo.phtml"  before="insta.titles"/>
+    	</referenceContainer>
+
+        <!-- call subcate-->
+        <referenceContainer name="main">
+			<block class="Magento\Framework\View\Element\Template" name="subcate" template="Magento_Cms::subcate.phtml"  before="promo"/>
+    	</referenceContainer>
+
+        <!-- call on sale-->
+        <referenceContainer name="main">
+			<block class="Magento\Framework\View\Element\Template" name="sale" template="Magento_Cms::sale.phtml"  before="subcate"/>
+    	</referenceContainer>
      </body>
 </page>
