@@ -11,18 +11,5 @@
         
         <!-- remove header panel -->
         <referenceContainer name="header.panel" remove="true" />
-
-        <!-- call pharmacy login bar to header -->
-        <referenceBlock name="header-wrapper">
-    		<block class="Magento\Framework\View\Element\Template" name="pharmacy.login" template="Magento_Cms::pharmacylogin.phtml" before="-"/>
-    	</referenceBlock>
-
-       
-
-        <!-- call rtb -->
-        <referenceBlock name="page.top">
-    		<block class="Magento\Framework\View\Element\Template" name="rtb" template="Magento_Cms::rtb.phtml" before="breadcrumbs" />
-    	</referenceBlock>
-
     </body>
 </page>
