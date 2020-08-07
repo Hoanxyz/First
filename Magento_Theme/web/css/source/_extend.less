@@ -1,4 +1,8 @@
-& when (@media-common = true) {
+//change breakpoint for website
+@screen__m: 960px;
+
+//for desktop only
+& when (@media-common = false) {
     .page-wrapper {
         .nav-sections {
             margin-bottom: 15px;
@@ -35,12 +39,41 @@
                 }           
             }        
         }
+    }
+}
+
+//for desktop and mobile
+& when (@media-common = true) {
+    .page-wrapper {
+        .nav-sections {
+            background-color: #3158A8;
+            .nav-sections-items {
+                .nav-sections-item-content {
+                    .navigation {
+                        background-color: inherit;
+                        ul {
+                            li {
+                                a {
+                                    span {
+                                        color: #ffffff;
+                                        font-family: 'TeXGyreAdventorRegular';
+                                        font-size: 16px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }           
+            }        
+        }
         .end-footerr {
+            height: 95px;
             padding-top: 6px;
             border: 1px solid #3E71DB;
             padding: 0 161px;
             align-items: center;
-            height: 81px;
             background-color: #264A95;
             display: flex;
             .card {
@@ -63,3 +96,40 @@
     }
 }
 
+//reponsive
+@media only screen and (max-width: 959px) {
+    .page-wrapper {
+        .end-footerr {
+            height: fit-content !important;
+            padding: 0 15px;
+            flex-direction: column;
+            .card {
+                .card2 {
+                    padding-left: 4px;
+                }
+                .card3 {
+                    padding-left: 3px;
+                }
+                padding-left: 0px;
+                flex-grow: 1;
+            }
+            .social-img {
+                padding-top: 0px;
+                .social2{
+                    padding: 0 16px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .page-wrapper {
+        .end-footerr {
+            align-items: flex-start;
+            .social-img {
+                padding-left: 7px;
+            }
+        }
+    }
+}

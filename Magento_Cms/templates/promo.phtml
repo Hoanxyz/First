@@ -9,3 +9,26 @@
                ->toHtml();
 
 ?>
+
+<script type="text/javascript">
+	require([
+    'jquery',
+    'owlcarousel'
+], function($) {
+    $('.promo__smallcontent').owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 29,
+        items:3,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            767: {
+                items: 3
+            }
+        }
+    });
+});
+</script>

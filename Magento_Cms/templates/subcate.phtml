@@ -9,3 +9,26 @@
                ->toHtml();
 
 ?>
+
+<script type="text/javascript">
+	require([
+    'jquery',
+    'owlcarousel'
+], function($) {
+    $('.subcate').owlCarousel({
+        loop: true,
+        nav: false,
+        margin: 35,
+        items:4,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            767: {
+                items: 4
+            }
+        }      
+    });
+});
+</script>

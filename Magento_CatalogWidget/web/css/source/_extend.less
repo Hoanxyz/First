@@ -21,6 +21,7 @@
                     }
                     .product-item-details {
                         .product-item-name {
+                            padding-top: 14px;
                             height: 49.83px;
                             width: 255px;
                             color: #333333;
@@ -95,7 +96,15 @@
             }
         }
         
+    }       
+}
+
+@media only screen and (max-width: 600px){ 
+    .page-layout-1column .block.widget .products-grid .product-item {
+        width: -webkit-fill-available ;
+        width: -moz-available;
+        .product-item-details {
+            padding-bottom: 30px;
+        }
     }
-    
-         
 }

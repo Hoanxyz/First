@@ -1,14 +1,8 @@
 @base-font:TeXGyreAdventorRegular;
-
 & when (@media-common = true) {
     .page-wrapper {
         .page-footer {
-            padding-bottom: 46px;
-            background-color: #3158A8;
             .footer {
-                img {
-                    padding-top: 10px;
-                }
                 .newsletter {
                     margin: auto;
                     .title {
@@ -24,6 +18,7 @@
                         line-height: 20px;
                     }
                     .content {
+                        // height: 71px;
                         padding-right: 178px;
                         .form {
                             box-sizing: border-box;
@@ -71,96 +66,6 @@
                                         text-align: center;
                                     }
                                 }
-                            }
-                        }
-                    }
-                }
-                .root-line {
-                    margin-top: 20px;
-                    height: 1px;
-                    background-color: #3E71DB;
-                    position:absolute;
-                    left:0;
-                    right:0;
-                }
-                .root-info {
-                    padding-top: 63px;
-                    font-family: @base-font;
-                    display: flex;
-                    justify-content: space-between;
-                    margin: 0;
-                    color: #FFFFFF;
-                    a {
-                        font-size: 14px;
-                        color: #FFFFFF;
-                    }
-
-                    //cate
-                    .root-cate {
-                        // padding-right: 56px;
-                        &__titile {
-                            letter-spacing: 01px;
-                            text-transform: uppercase;
-                        }
-                        .list-cate {
-                            line-height: 24px;
-                            display: flex;
-                            flex-direction: column;
-                            .widget {
-                                margin: 0;
-                            }
-                        }
-                    }
-
-                    //price
-                    .about-price {
-                        &__titile {
-                            letter-spacing: 01px;
-                            text-transform: uppercase;
-                        }
-                        &__list {
-                            line-height: 24px;
-                            display: flex;
-                            flex-direction: column;
-                        }
-                    }
-
-                    //shopping 
-                    .shopping {
-                        &__titile {
-                            letter-spacing: 01px;
-                            text-transform: uppercase;
-                        }
-                        &__list {
-                            line-height: 24px;
-                            display: flex;
-                            flex-direction: column;
-                        }
-                    }
-
-                    //information
-                    .information {
-                        &__titile {
-                            letter-spacing: 01px;
-                            text-transform: uppercase;
-                        }
-                        &__list {
-                            line-height: 24px;
-                            display: flex;
-                            flex-direction: column;
-                        }
-                    }
-                    .ph-address {
-                        &__titile {
-                            letter-spacing: 01px;
-                            text-transform: uppercase;
-                        }
-                        &__list {
-                            line-height: 24px;
-                            display: flex;
-                            flex-direction: column;
-                            .address-item {
-                                margin: 0;
                             }
                         }
                     }
