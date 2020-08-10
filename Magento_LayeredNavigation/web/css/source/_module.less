@@ -1,0 +1,53 @@
+// /**
+//  * Copyright © Magento, Inc. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .filter {
+        .filter-title {
+            display: none;
+        }
+        .filter-content {
+            .filter-current {
+                .items {
+                    .item {
+                        display: flex;
+                        .filter-label {
+
+                        }
+                        .filter-value {
+                            flex-grow: 1;
+                        }
+                        .action {
+                            &:extend(.abs-remove-button-for-blocks all);
+                            text-align: end;
+                            padding: 0;
+                            position: unset;
+                            top: -1px;
+                        }
+                    }
+                }
+            }
+            .filter-actions {
+                text-align: end;
+                padding: 0;
+            }
+            .filter-options {
+                .filter-options-item {
+                    .filter-options-title {
+
+                    }
+                    .filter-options-content {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+   
+}

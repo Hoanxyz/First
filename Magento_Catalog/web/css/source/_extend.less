@@ -1,3 +1,4 @@
+@base-font:TeXGyreAdventorRegular;
 //4 product per row
 .page-layout-1column .block.widget .products-grid .product-item {
     width: calc(~'(100% - 6%) / 4');
@@ -7,5 +8,64 @@
 @media only screen and (max-width: 959px){ 
     .page-layout-1column .block.widget .products-grid .product-item {
         width: calc(~'(100% - 4%) / 3');
+    }
+}
+
+.page-products {
+    .page-wrapper {
+        .page-main {
+            .columns {
+                .main {
+                    .page-title-wrapper {
+                        .page-title {     
+                            margin: 0 auto;                      
+                            height: 70px;
+                            width: fit-content;
+                            line-height: 70px;
+                            .base {  
+                                text-transform: uppercase;                             
+                                color: #3158A8;
+                                font-family: @base-font;
+                                font-size: 45px;
+                                font-weight: bold;
+                                letter-spacing: 0;                                                               
+                            }
+                        }
+                    }
+                    .top-toolbar {
+                        .toolbar-products {
+                            display: flex;
+                            .pages {
+                                order: 3;
+                                display: block;
+                            }
+                            .limiter {
+                                order: 2;
+                                display: block;
+                                text-align: left;
+                                flex-grow: 1;
+                            }
+                        }                       
+                    }
+                    .bottom-toolbar {
+                        .pages {
+                                display: block;
+                                float: right;
+                        }
+                        .sorter {
+                            display: none;
+                        }
+                    }               
+                }
+                .sidebar {
+                    .count {
+                        display: none;
+                    }
+                }
+                .sidebar-additional {
+                    display: none;
+                }
+            }
+        }
     }
 }
