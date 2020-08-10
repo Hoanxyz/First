@@ -7,6 +7,7 @@
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
+        <script src="js/myjs.js" />
         <css src="css/styles-l.css" media="screen and (min-width: 960px)"/>
         <link rel="stylesheet" type="text/css" src="https://fontlibrary.org/face/tex-gyre-adventor" src_type="url"/>
         <link rel="stylesheet" type="text/css" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" src_type="url"/>

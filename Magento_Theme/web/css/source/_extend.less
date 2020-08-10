@@ -1,3 +1,4 @@
+@base-font:TeXGyreAdventorRegular;
 //change breakpoint for website
 @screen__m: 960px;
 
@@ -67,6 +68,22 @@
                     }
                 }           
             }        
+        }
+        .breadcrumbs {
+            .items {
+                font-family: @base-font;
+                font-size: 11px;
+                .item {
+                    a:visited {
+                        height: 16px;
+                        width: 32px;
+                        color: #E74C3C;                      
+                        letter-spacing: 0;
+                        line-height: 16px;
+                        text-decoration: none;
+                    }
+                }
+            }          
         }
         .end-footerr {
             height: 95px;
