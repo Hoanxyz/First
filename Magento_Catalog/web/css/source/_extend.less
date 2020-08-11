@@ -11,61 +11,459 @@
     }
 }
 
-.page-products {
-    .page-wrapper {
-        .page-main {
-            .columns {
-                .main {
-                    .page-title-wrapper {
-                        .page-title {     
-                            margin: 0 auto;                      
-                            height: 70px;
-                            width: fit-content;
-                            line-height: 70px;
-                            .base {  
-                                text-transform: uppercase;                             
-                                color: #3158A8;
-                                font-family: @base-font;
-                                font-size: 45px;
-                                font-weight: bold;
-                                letter-spacing: 0;                                                               
+& when (@media-common = true) {
+    .page-products {
+        .page-wrapper {
+            .breadcrumbs {
+                display: block;
+            }
+            .page-main {
+                .columns {
+                    .main {
+                        .page-title-wrapper {
+                            padding-bottom: 12px;
+                            border-bottom: 1px solid #F4F4F4;
+                            margin-bottom: 15px;
+                            .page-title {     
+                                margin: 0 auto;                      
+                                height: 70px;
+                                width: fit-content;
+                                line-height: 70px;
+                                .base {  
+                                    text-transform: uppercase;                             
+                                    color: #3158A8;
+                                    font-family: @base-font;
+                                    font-size: 45px;
+                                    font-weight: bold;
+                                    letter-spacing: 0;                                                               
+                                }
                             }
                         }
-                    }
-                    .top-toolbar {
-                        .toolbar-products {
-                            display: flex;
+                        .top-toolbar {
+                            .toolbar-products {
+                                display: flex;
+                                .pages {                                   
+                                    height: 40px;
+                                    width: auto;
+                                    order: 3;
+                                    display: flex;
+                                    align-items: center;
+                                    .pages-label {
+                                        display: contents;
+                                        height: 20px;
+                                        width: 36px;
+                                        color: #3158A8;
+                                        font-family: @base-font;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 20px;
+                                    }
+                                    .pages-items {
+                                        padding-left: 6px;
+                                        display: flex;
+                                        align-items: center;
+                                        .item {
+                                            margin: 0;
+                                            .page {
+                                                display: flex;
+                                                align-items: center;
+                                                background: #ffffff;
+                                                height: 20px;
+                                                width: 8px;
+                                                color: #3158A8;
+                                                font-family: @base-font;
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                letter-spacing: 0;
+                                                line-height: 20px;
+                                            }
+                                        }
+                                        .current {
+                                            .page{
+                                                color: #000000;
+                                            }
+                                        }
+                                        .pages-item-next {
+                                            position: relative;
+                                            box-sizing: border-box;
+                                            height: 40px;
+                                            width: 40px;
+                                            border: 1px solid #E4E4E4;
+                                            border-radius: 3px;
+                                            background-color: #FFFFFF;                               
+                                            .action {
+                                                background-color: #ffffff;
+                                                box-shadow: none;
+                                                border: none;
+                                                margin: 0;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translateX(-50%) translateY(-50%);
+                                            }
+                                        }
+                                        .pages-item-previous {
+                                            position: relative;
+                                            box-sizing: border-box;
+                                            height: 40px;
+                                            width: 40px;
+                                            border: 1px solid #E4E4E4;
+                                            border-radius: 3px;
+                                            background-color: #FFFFFF;                               
+                                            .action {
+                                                background-color: #ffffff;
+                                                box-shadow: none;
+                                                border: none;
+                                                margin: 0;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translateX(-50%) translateY(-50%);
+                                            }
+                                        }
+                                    }
+                                }
+                                .limiter {
+                                    padding-left: 38px;
+                                    order: 2;
+                                    display: block;
+                                    text-align: left;
+                                    flex-grow: 1;
+                                    .label {
+                                        height: 20px;
+                                        width: 50px;
+                                        color: #333333;
+                                        font-family: @base-font;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 20px;
+                                    }
+                                    .control {
+                                        .limiter-options {
+                                            padding-left: 21px;
+                                            color: #333333;
+                                            font-family: @base-font;
+                                            font-size: 14px;
+                                            letter-spacing: 0;
+                                            line-height: 20px;
+                                            box-sizing: border-box;
+                                            height: 40px;
+                                            width: 69px;
+                                            border: 1px solid #E4E4E4;
+                                            border-radius: 3px;
+                                            background-color: #FFFFFF
+                                        }
+                                    }
+                                    .limiter-text {
+                                        display: none;
+                                    }
+                                }
+                                .toolbar-sorter {
+                                    position: static;
+                                    .sorter-label {
+                                        font-family: @base-font;
+                                        height: 20px;
+                                        width: 46px;
+                                        color: #333333;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 20px;
+                                    }
+                                    .sorter-options {
+                                        padding-left: 17px;
+                                        font-family: @base-font;
+                                        color: #333333;
+                                        font-size: 14px;
+                                        letter-spacing: 0;
+                                        line-height: 20px;
+                                        box-sizing: border-box;
+                                        height: 40px;
+                                        width: 128px;
+                                        border: 1px solid #E4E4E4;
+                                        border-radius: 3px;
+                                        background-color: #FFFFFF;
+                                    }
+                                    .action {
+                                        display: none;
+                                    }
+                                }
+                            }                       
+                        }
+                        .bottom-toolbar {
                             .pages {
-                                order: 3;
-                                display: block;
+                                    height: 40px;
+                                    width: auto;
+                                    display: flex;
+                                    align-items: center;
+                                    float: right;
+                                    .pages-label {
+                                        display: contents;
+                                        height: 20px;
+                                        width: 36px;
+                                        color: #3158A8;
+                                        font-family: @base-font;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 20px;
+                                    }
+                                    .pages-items {
+                                        display: flex;
+                                        align-items: center;
+                                        .item {
+                                            margin: 0;
+                                            .page {
+                                                display: flex;
+                                                align-items: center;
+                                                background: #ffffff;
+                                                height: 20px;
+                                                width: 8px;
+                                                color: #3158A8;
+                                                font-family: @base-font;
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                letter-spacing: 0;
+                                                line-height: 20px;
+                                            }
+                                        }
+                                        .current {
+                                            .page{
+                                                color: #000000;
+                                            }
+                                        }
+                                        .pages-item-next {
+                                            position: relative;
+                                            box-sizing: border-box;
+                                            height: 40px;
+                                            width: 40px;
+                                            border: 1px solid #E4E4E4;
+                                            border-radius: 3px;
+                                            background-color: #FFFFFF;                               
+                                            .action {
+                                                background-color: #ffffff;
+                                                box-shadow: none;
+                                                border: none;
+                                                margin: 0;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translateX(-50%) translateY(-50%);
+                                            }
+                                        }
+                                        .pages-item-previous {
+                                            margin-left: 6px;
+                                            position: relative;
+                                            box-sizing: border-box;
+                                            height: 40px;
+                                            width: 40px;
+                                            border: 1px solid #E4E4E4;
+                                            border-radius: 3px;
+                                            background-color: #FFFFFF;                               
+                                            .action {
+                                                background-color: #ffffff;
+                                                box-shadow: none;
+                                                border: none;
+                                                margin: 0;
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translateX(-50%) translateY(-50%);
+                                            }
+                                        }
+                                    }
                             }
-                            .limiter {
-                                order: 2;
-                                display: block;
-                                text-align: left;
-                                flex-grow: 1;
+                            .sorter {
+                                display: none;
                             }
-                        }                       
+                        }               
                     }
-                    .bottom-toolbar {
-                        .pages {
-                                display: block;
-                                float: right;
-                        }
-                        .sorter {
+                    .sidebar {
+                        .count {
                             display: none;
                         }
-                    }               
-                }
-                .sidebar {
-                    .count {
+                    }
+                    .sidebar-additional {
                         display: none;
                     }
                 }
-                .sidebar-additional {
-                    display: none;
-                }
             }
         }
+        .products-grid {
+            .product-items {
+                .product-item {
+                    .product-item-info {
+                        position: relative;
+                        box-shadow: none;
+                        border: none;
+                        width: auto;
+                        margin: 0;
+                        padding: 0;
+                        // width: 100%;
+                        .product-item-photo {
+                            display: block;
+                            text-align: center;
+                            .product-image-container {
+                                // margin: 0 auto;
+                                .product-image-wrapper {
+                                    padding-bottom: 97%;
+                                }
+                            }
+                        }
+                        .product-item-details {
+                            .product-item-name {
+                                padding-top: 14px;
+                                height: 49.83px;
+                                width: 199px;
+                                color: #333333;
+                                font-family: @base-font;
+                                font-size: 14px;
+                                letter-spacing: 0;
+                                line-height: 16px;
+                                text-align: center;
+                                margin: 0 auto;
+                            }
+                            .product-item-inner {
+                                display: contents;
+                                .product-item-actions {
+                                    text-align: center;
+                                    .action {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 32px;
+                                        width: 170px;
+                                        border-radius: 3px;
+                                        background-color: #F37021;
+                                        border: none;
+                                        span {
+                                            text-transform: uppercase;
+                                            height: 21px;
+                                            width: 128px;
+                                            color: #FFFFFF;
+                                            font-family: @base-font;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            letter-spacing: 0;
+                                            line-height: 21px;
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                            }
+                            .price-box {
+                                margin: 0;
+                                padding-bottom: 29px;
+                                .just-default-price {
+                                    padding-bottom: 28px;
+                                    padding-top: 6px;
+                                    display: block;
+                                    .price {
+                                        height: 18px;
+                                        width: 58px;
+                                        color: #4F4F4F;
+                                        font-family: @base-font;
+                                        font-size: 20px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 18px;
+                                    }
+                                }
+                                .red-band {
+                                    top: 0;
+                                    z-index: 1;
+                                    position: absolute;
+                                    clip-path: polygon(100% 0px, 87% 50%, 100% 100%, 0px 100%, 0px 50%, 0% 0%);
+                                    height: 26px;
+                                    width: 66px;
+                                    background-color: #D70000;
+                                    p {
+                                        text-transform: uppercase;
+                                        height: 27px;
+                                        color: #FFFFFF;
+                                        font-family: @base-font;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 27px;
+                                    }
+                                }
+                                .old-price {
+                                    padding-bottom: 5px;
+                                    display: block;
+                                    .price {
+                                        height: 18px;
+                                        width: 58px;
+                                        color: #4F4F4F;
+                                        font-family: @base-font;
+                                        font-size: 20px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 18px;
+                                    }
+                                }
+                                .special-price {
+                                    .price {
+                                        height: 18px;
+                                        width: 58px;
+                                        color: #FF0000;
+                                        font-family: @base-font;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 18px;
+                                    }
+                                }
+                                text-align: center;
+                            }
+                        } 
+                    }
+                }
+            }
+            
+        }       
+    }
+}
+
+@media only screen and (max-width: 959px){
+    .page-products .products-grid .product-items .product-item .product-item-info .product-item-details .price-box .red-band {
+        left: 20%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .page-products .columns {
+        padding-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .page-products .page-wrapper .page-main .columns .main .top-toolbar .toolbar-products {
+        align-items: center;
+    }
+    .pages .pages-items {
+        padding: 2px 5px 0;
+    }
+    .page-products .page-wrapper .page-main .columns .main .top-toolbar .toolbar-products .pages {
+        display: none;
+    }
+
+    .toolbar .pages {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    .page-products .page-wrapper .page-main .columns .main .top-toolbar .toolbar-products .limiter {
+        padding-left: 23px;
+    }
+    .products-grid .product-item {
+        width: calc(100%);
+        margin-bottom: 50px;
+    }
+    .page-products .products-grid .product-items .product-item .product-item-info .product-item-details .price-box .red-band {
+        left: 20%;
     }
 }

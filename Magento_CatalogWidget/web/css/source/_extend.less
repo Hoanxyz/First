@@ -1,102 +1,151 @@
+
+
+@base-font:TeXGyreAdventorRegular;
+& when (@media-common = false) {
+    .page-layout-1column .block.widget .products-grid .product-item:nth-child(4n + 1) {
+        margin-left: 0%;
+    }
+    
+    .page-layout-1column .block.widget .products-grid .product-item:nth-child(4n + 2) {
+        margin-left: 2%;
+    }
+}
 & when (@media-common = true) {
-    .products-grid {
-        .product-items {
-            .product-item {
-                .product-item-info {
-                    box-shadow: none;
-                    border: none;
-                    width: auto;
-                    margin: 0;
-                    padding: 0;
-                    // width: 100%;
-                    .product-item-photo {
-                        display: block;
-                        text-align: center;
-                        .product-image-container {
-                            // margin: 0 auto;
-                            .product-image-wrapper {
-                                padding-bottom: 97%;
+    .cms-index-index {
+        .products-grid {
+            .product-items {
+                .product-item {
+                    .product-item-info {
+                        position: relative;
+                        box-shadow: none;
+                        border: none;
+                        width: auto;
+                        margin: 0;
+                        padding: 0;
+                        // width: 100%;
+                        .product-item-photo {
+                            display: block;
+                            text-align: center;
+                            .product-image-container {
+                                // margin: 0 auto;
+                                .product-image-wrapper {
+                                    padding-bottom: 97%;
+                                }
                             }
                         }
-                    }
-                    .product-item-details {
-                        .product-item-name {
-                            padding-top: 14px;
-                            height: 49.83px;
-                            width: 255px;
-                            color: #333333;
-                            font-family: "TeXGyreAdventorRegular";
-                            font-size: 14px;
-                            letter-spacing: 0;
-                            line-height: 16px;
-                            text-align: center;
-                            margin: 0 auto;
-                        }
-                        .product-item-inner {
-                            display: contents;
-                            .product-item-actions {
+                        .product-item-details {
+                            .product-item-name {
+                                padding-top: 14px;
+                                height: 49.83px;
+                                width: auto;
+                                color: #333333;
+                                font-family: @base-font;
+                                font-size: 14px;
+                                letter-spacing: 0;
+                                line-height: 16px;
                                 text-align: center;
-                                .action {
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
-                                    height: 32px;
-                                    width: 189px;
-                                    border-radius: 3px;
-                                    background-color: #F37021;
-                                    border: none;
-                                    span {
-                                        text-transform: uppercase;
-                                        height: 21px;
-                                        width: 128px;
-                                        color: #FFFFFF;
-                                        font-family: "TeXGyreAdventorRegular";
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                        letter-spacing: 0;
-                                        line-height: 21px;
-                                        text-align: center;
+                                margin: 0 auto;
+                            }
+                            .product-item-inner {
+                                display: contents;
+                                .product-item-actions {
+                                    text-align: center;
+                                    .action {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 32px;
+                                        width: 189px;
+                                        border-radius: 3px;
+                                        background-color: #F37021;
+                                        border: none;
+                                        span {
+                                            text-transform: uppercase;
+                                            height: 21px;
+                                            width: 128px;
+                                            color: #FFFFFF;
+                                            font-family: @base-font;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            letter-spacing: 0;
+                                            line-height: 21px;
+                                            text-align: center;
+                                        }
                                     }
                                 }
                             }
-                        }
-                        .price-box {
-                            margin: 0;
-                            padding-bottom: 29px;
-                            .old-price {
-                                padding-bottom: 5px;
-                                display: block;
-                                .price {
-                                    height: 18px;
-                                    width: 58px;
-                                    color: #4F4F4F;
-                                    font-family: "TeXGyreAdventorRegular";
-                                    font-size: 30px;
-                                    font-weight: bold;
-                                    letter-spacing: 0;
-                                    line-height: 18px;
+                            .price-box {
+                                margin: 0;
+                                padding-bottom: 29px;
+                                .just-default-price {
+                                    padding-bottom: 37px;
+                                    display: block;
+                                    .price {
+                                        height: 18px;
+                                        width: 58px;
+                                        color: #4F4F4F;
+                                        font-family: @base-font;
+                                        font-size: 30px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 18px;
+                                    }
                                 }
-                            }
-                            .special-price {
-                                .price {
-                                    height: 18px;
-                                    width: 58px;
-                                    color: #FF0000;
-                                    font-family: "TeXGyreAdventorRegular";
-                                    font-size: 22px;
-                                    font-weight: bold;
-                                    letter-spacing: 0;
-                                    line-height: 18px;
+                                .red-band {
+                                    top: 0;
+                                    z-index: 1;
+                                    position: absolute;
+                                    clip-path: polygon(100% 0px, 87% 50%, 100% 100%, 0px 100%, 0px 50%, 0% 0%);
+                                    height: 26px;
+                                    width: 66px;
+                                    background-color: #D70000;
+                                    p {
+                                        text-transform: uppercase;
+                                        height: 26px;
+                                        color: #FFFFFF;
+                                        font-family: @base-font;
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 26px;
+                                    }
                                 }
+                                .old-price {
+                                    padding-bottom: 5px;
+                                    display: block;
+                                    .price {
+                                        height: 18px;
+                                        width: 58px;
+                                        color: #4F4F4F;
+                                        font-family: @base-font;
+                                        font-size: 30px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 18px;
+                                    }
+                                }
+                                .special-price {
+                                    .price {
+                                        height: 18px;
+                                        width: 58px;
+                                        color: #FF0000;
+                                        font-family: @base-font;
+                                        font-size: 22px;
+                                        font-weight: bold;
+                                        letter-spacing: 0;
+                                        line-height: 18px;
+                                    }
+                                }
+                                text-align: center;
                             }
-                            text-align: center;
-                        }
-                    } 
+                        } 
+                    }
                 }
             }
+            
         }
-        
-    }       
+    }
+           
 }
 
 @media only screen and (max-width: 600px){ 
