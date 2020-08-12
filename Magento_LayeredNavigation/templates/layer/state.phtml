@@ -28,7 +28,7 @@
                     <?php if($_filter->getName() == "Price"): ?>
                         <?= $block->escapeHtml(__($_filter->getName())." Range:") ?>
                     <?php else: ?>
-                        <?= $block->escapeHtml(__($_filter->getName()).":") ?>
+                        <?= $block->escapeHtml(__($_filter->getName())) ?>
                     <?php endif; ?>
                 </span>
                 <span class="filter-value"><?= $block->escapeHtml($block->stripTags($_filter->getLabel())) ?></span>

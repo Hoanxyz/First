@@ -3,7 +3,6 @@
 .page-layout-1column .block.widget .products-grid .product-item {
     width: calc(~'(100% - 6%) / 4');
 }
-
 //3 product per row
 @media only screen and (max-width: 959px){ 
     .page-layout-1column .block.widget .products-grid .product-item {
@@ -12,6 +11,16 @@
 }
 
 & when (@media-common = true) {
+    .pages .action.previous:before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f104";
+    }
+    .pages .action.next:before{
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f105";
+    }
     .page-products {
         .page-wrapper {
             .breadcrumbs {
@@ -25,6 +34,7 @@
                             border-bottom: 1px solid #F4F4F4;
                             margin-bottom: 15px;
                             .page-title {     
+                                padding-top: 8px;
                                 margin: 0 auto;                      
                                 height: 70px;
                                 width: fit-content;
@@ -47,7 +57,7 @@
                                     width: auto;
                                     order: 3;
                                     display: flex;
-                                    align-items: center;
+                                    align-items: center;                                   
                                     .pages-label {
                                         display: contents;
                                         height: 20px;
@@ -60,11 +70,18 @@
                                         line-height: 20px;
                                     }
                                     .pages-items {
-                                        padding-left: 6px;
+                                        padding-left: 4px;
                                         display: flex;
                                         align-items: center;
                                         .item {
-                                            margin: 0;
+                                            height: 20px;
+                                            width: 4px;
+                                            color: #3158A8;
+                                            font-family: @base-font;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            letter-spacing: 0;
+                                            line-height: 20px;
                                             .page {
                                                 display: flex;
                                                 align-items: center;
@@ -85,6 +102,7 @@
                                             }
                                         }
                                         .pages-item-next {
+                                            margin-left: 12px;
                                             position: relative;
                                             box-sizing: border-box;
                                             height: 40px;
@@ -104,6 +122,8 @@
                                             }
                                         }
                                         .pages-item-previous {
+                                            margin-left: 8px;
+                                            margin-right: 4px;
                                             position: relative;
                                             box-sizing: border-box;
                                             height: 40px;
@@ -125,7 +145,7 @@
                                     }
                                 }
                                 .limiter {
-                                    padding-left: 38px;
+                                    padding-left: 36px;
                                     order: 2;
                                     display: block;
                                     text-align: left;
@@ -141,8 +161,10 @@
                                         line-height: 20px;
                                     }
                                     .control {
+                                        position: relative;
                                         .limiter-options {
-                                            padding-left: 21px;
+                                            background: none;
+                                            padding-left: 15px;
                                             color: #333333;
                                             font-family: @base-font;
                                             font-size: 14px;
@@ -155,13 +177,24 @@
                                             border-radius: 3px;
                                             background-color: #FFFFFF
                                         }
+                                        .arrow-down-limiter {
+                                            top: 27%;
+                                            left: 59%;
+                                            position: absolute;
+                                        }
+                                        .arrow-down-limiter::before {
+                                            font-family: "Font Awesome 5 Free";
+                                            font-weight: 900;
+                                            content: "\f107";
+                                        }
                                     }
                                     .limiter-text {
                                         display: none;
                                     }
                                 }
                                 .toolbar-sorter {
-                                    position: static;
+                                    display: inline-table;
+                                    position: relative;
                                     .sorter-label {
                                         font-family: @base-font;
                                         height: 20px;
@@ -173,7 +206,9 @@
                                         line-height: 20px;
                                     }
                                     .sorter-options {
-                                        padding-left: 17px;
+                                        margin: 0 5px 0 11px;
+                                        background: none;
+                                        padding-left: 16px;
                                         font-family: @base-font;
                                         color: #333333;
                                         font-size: 14px;
@@ -184,7 +219,17 @@
                                         width: 128px;
                                         border: 1px solid #E4E4E4;
                                         border-radius: 3px;
-                                        background-color: #FFFFFF;
+                                        background-color: #FFFFFF;                                       
+                                    }
+                                    .arrow-down {
+                                        top: 27%;
+                                        left: 84%;
+                                        position: absolute;
+                                    }
+                                    .arrow-down::before {
+                                        font-family: "Font Awesome 5 Free";
+                                        font-weight: 900;
+                                        content: "\f107";
                                     }
                                     .action {
                                         display: none;
@@ -214,7 +259,14 @@
                                         display: flex;
                                         align-items: center;
                                         .item {
-                                            margin: 0;
+                                            height: 20px;
+                                            width: 4px;
+                                            color: #3158A8;
+                                            font-family: @base-font;
+                                            font-size: 14px;
+                                            font-weight: bold;
+                                            letter-spacing: 0;
+                                            line-height: 20px;
                                             .page {
                                                 display: flex;
                                                 align-items: center;
@@ -235,6 +287,7 @@
                                             }
                                         }
                                         .pages-item-next {
+                                            margin-left: 10px;
                                             position: relative;
                                             box-sizing: border-box;
                                             height: 40px;
@@ -252,9 +305,11 @@
                                                 left: 50%;
                                                 transform: translateX(-50%) translateY(-50%);
                                             }
+                                            
                                         }
                                         .pages-item-previous {
-                                            margin-left: 6px;
+                                            margin-left: 8px;
+                                            margin-right: 4px;
                                             position: relative;
                                             box-sizing: border-box;
                                             height: 40px;
@@ -426,7 +481,11 @@
         }       
     }
 }
-
+@media only screen and (max-width: 1024px) and (min-width: 959px) {
+    .page-products .products-grid .product-item {
+        width: calc((100% - 4%) / 3);
+    }
+}
 @media only screen and (max-width: 959px){
     .page-products .products-grid .product-items .product-item .product-item-info .product-item-details .price-box .red-band {
         left: 20%;

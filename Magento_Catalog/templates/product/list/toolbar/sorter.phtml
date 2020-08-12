@@ -24,6 +24,7 @@
             </option>
         <?php endforeach; ?>
     </select>
+    <span class="arrow-down"></span>
     <?php if ($block->getCurrentDirection() == 'desc') :?>
         <a title="<?= $block->escapeHtmlAttr(__('Set Ascending Direction')) ?>"
            href="#"

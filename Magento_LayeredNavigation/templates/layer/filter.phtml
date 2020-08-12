@@ -19,8 +19,8 @@
         <li class="item">
             <?php if ($filterItem->getCount() > 0) : ?>
                 <a href="<?= $block->escapeUrl($filterItem->getUrl()) ?>">
-                <input onchange="window.location.href='<?= $block->escapeUrl($filterItem->getUrl()) ?>'" type="checkbox" class="checkbox"  value="lien" name="rou" />               
-                    <?= /* @noEscape */ $filterItem->getLabel() ?>
+                <input onchange="window.location.href='<?= $block->escapeUrl($filterItem->getUrl()) ?>'" type="checkbox" class="checkbox"  id="<?= $block->escapeUrl($filterItem->getUrl()) ?>" name="rou" />                                  
+                    <label for="<?= $block->escapeUrl($filterItem->getUrl()) ?>"><span class="for-checkbox"></span><?= /* @noEscape */ $filterItem->getLabel() ?></label>
                     <?php if ($this->helper(\Magento\Catalog\Helper\Data::class)->shouldDisplayProductCountOnLayer()) : ?>
                         <span class="count"><?= /* @noEscape */ (int)$filterItem->getCount() ?><span class="filter-count-label">
                             <?php if ($filterItem->getCount() == 1) :

@@ -1,0 +1,185 @@
+@base-font:TeXGyreAdventorRegular; 
+& when (@media-common = true) {
+    .sidebar-main {
+        padding-right: 0;
+        .filter {
+            font-family: @base-font;
+            .filter-content {
+                .filter-subtitle {
+                    display: none;
+                }
+                .filter-current {
+                    padding-bottom: 2px;
+                    .block-subtitle {
+                        height: 27px;
+                        padding-top: 7px;
+                        padding-bottom: 15px;
+                        color: #3158A8;
+                        font-size: 18px;
+                        font-weight: bold;
+                        letter-spacing: 0;
+                        line-height: 27px;
+                    }
+                    .items {
+                        padding-bottom: 0;
+                        padding-right: 0;
+                        .item {
+                            margin: 0;
+                            padding-left: 0;
+                            display: flex;
+                            .filter-label {
+                                height: 20px;
+                                color: #333333;
+                                font-size: 14px;
+                                font-weight: bold;
+                                letter-spacing: 0;
+                                line-height: 20px;
+                            }
+                            .filter-value {
+                                padding-left: 12px;
+                                flex-grow: 1;
+                                height: 20px;
+                                color: #333333;
+                                font-size: 14px;
+                                font-weight: bold;
+                                letter-spacing: 0;
+                                line-height: 20px;
+                            }
+                            .action::before {
+                                font-family: "Font Awesome 5 Free";
+                                font-weight: 900;
+                                content: "\f00d";
+                                height: 20px;
+                                width: 9px;
+                                color: #E74C3C;
+                                font-size: 13px;
+                                letter-spacing: 0;
+                                line-height: 20px;
+                                text-align: right;
+                            }
+                            .action {
+                                &:extend(.abs-remove-button-for-blocks all);
+                                text-align: end;
+                                padding: 0;
+                                position: unset;
+                                top: -1px;                          
+                            }
+                        }
+                    }
+                }
+                .filter-actions {
+                    margin: 0;
+                    text-align: end;
+                    padding: 0 0 8px 0;
+                    .filter-clear {
+                        span {
+                            height: 20px;
+                            color: #E74C3C;
+                            font-size: 13px;
+                            letter-spacing: 0;
+                            line-height: 20px;
+                        }
+                    }
+                }
+                .filter-options {
+                    .filter-options-item {
+                        padding-bottom: 0;
+                        padding-top: 4px;
+                        border: none;
+                        display: flex;
+                        flex-direction: column;
+                        .filter-options-title {
+                            cursor: unset;
+                            text-transform: capitalize;
+                            padding-bottom: 6px;
+                            border-bottom: 1px solid #F4F4F4;
+                            height: 27px;
+                            color: #3158A8;
+                            font-size: 18px;
+                            font-weight: bold;
+                            letter-spacing: 0;
+                            line-height: 27px;
+                        }
+                        .filter-options-title:after {
+                            display: none;
+                        }
+                        .filter-options-content {
+                            padding-top: 8px;
+                            display: block !important;
+                            font-size: 14px;
+                            letter-spacing: 0;
+                            line-height: 24px;
+                            .items {
+                                padding-top: 6px;
+                                .item {
+                                    width: fit-content;
+                                    padding-bottom: 8px;
+                                    line-height: 0;
+                                    margin: 0;
+                                    a {
+                                        margin: 0;
+                                        padding: 0;
+                                        label {
+                                            display: flex;
+                                            align-items: center;
+                                            cursor: pointer;
+                                            span {
+                                                padding-right: 8px;
+                                            }
+                                        }
+                                        color: #333333;
+                                        input[type="checkbox"] {
+                                            display:none;
+                                        }
+                                        input[type="checkbox"] + label .for-checkbox {
+                                            display:inline-block;
+                                            width:20px;
+                                            height:20px;
+                                            background: url('@{baseDir}images/checkbox.PNG') left top no-repeat;
+                                            cursor:pointer;
+                                        }
+                                        input[type="checkbox"]:checked + label .for-checkbox {
+                                            background: url('@{baseDir}images/checked.PNG') left top no-repeat;
+                                        }
+                                        #test {
+                                            box-sizing: border-box;
+                                            height: 20px;
+                                            width: 20px;
+                                            border: 1px solid #E4E4E4;
+                                            border-radius: 3px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+   
+}
+
+@media only screen and (max-width: 1024px){ 
+    .sidebar-main .filter .filter-content .filter-current .block-subtitle {
+        font-size: 15px;
+    }
+    .sidebar-main .filter .filter-content .filter-current .items .item .filter-label {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 959px){ 
+    .page-products .columns {
+        padding-top: 0px;
+    }
+    .filter-title {
+        strong {
+            box-sizing: border-box;
+            border: 1px solid #E4E4E4;
+            border-radius: 3px;
+            background-color: #FFFFFF;
+        }
+    }
+}
